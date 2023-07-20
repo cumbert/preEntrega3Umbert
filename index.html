@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Envío y Cálculo de Impuestos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<div class="container">
+  <h1>Calculadora de Envío</h1>
+
+  <form>
+    <div class="form-group">
+      <label for="tipo-envio">Tipo de Envío:</label>
+      <select class="form-control" id="tipo-envio">
+        <option value="nacional">Nacional</option>
+        <option value="internacional">Internacional</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="puntoPartida">Punto de Partida:</label>
+      <input type="text" class="form-control" id="puntoPartida">
+    </div>
+
+    <div class="form-group">
+      <label for="destino">Destino:</label>
+      <select class="form-control" id="destino">
+        <option value="america">América</option>
+        <option value="europa">Europa</option>
+        <option value="asia">Asia</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="clasificacion">Clasificación:</label>
+      <select class="form-select" id="clasificacion">
+        <option value="bijou">Bijou</option>
+        <option value="accesorios-moda">Accesorios de Moda</option>
+        <option value="textiles">Textiles</option>
+        <option value="marroquineria">Marroquinería</option>
+        <option value="accesorios-tecnologia">Accesorios de Tecnología</option>
+        <option value="otros">Otros</option>
+      </select>
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="contiene-telas">
+      <label class="form-check-label" for="contiene-telas">¿Contiene Telas?</label>
+    </div>
+
+    <div class="form-group">
+      <label for="tipo-tejido">Tipo de Tejido:</label>
+      <select class="form-select" id="tipo-tejido">
+        <option value="punto">Punto</option>
+        <option value="plano">Plano</option>
+      </select>
+      <div id="guiatejido" class="form-text">Indique si el tejido es de punto o plano</div>
+    </div>
+
+    <div class="form-group">
+      <label for="cantidad-productos">Cantidad de Productos:</label>
+      <input type="number" class="form-control" id="cantidad-productos">
+    </div>
+
+    <div class="form-group">
+      <label for="peso-total">Peso Total (g):</label>
+      <input type="number" class="form-control" id="peso-total">
+    </div>
+
+    <div class="form-group">
+      <label for="valor-declarado">Valor Declarado:</label>
+      <input type="number" class="form-control" id="valor-declarado">
+    </div>
+
+    <button type="button" class="btn btn-primary" id="calcular-btn">Calcular Tiempo de Envío</button>
+    <button type="button" class="btn btn-primary" id="calcular-impuestos-btn">Calcular Impuestos</button>
+
+    <p id="resultado"></p>
+  </form>
+</div>
+<script src="script.js"></script>
+</html>
+
