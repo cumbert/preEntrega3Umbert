@@ -16,7 +16,7 @@
   <div class="container">
     <h1>Calculadora de Envío</h1>
 
-    <form>
+    <form id="formulario">
       <div class="form-group">
         <label for="tipo-envio">Tipo de Envío:</label>
         <select class="form-control" id="tipo-envio">
@@ -80,6 +80,10 @@
         <input type="number" class="form-control" id="valor-declarado">
       </div>
 
+    </form>
+
+    <div class="botones">
+
       <button type="button" class="btn btn-primary" id="calcular-btn">Calcular</button>
 
       <p id="resultado-tiempo-envio">Tiempo de envio:</p>
@@ -89,7 +93,8 @@
 
       <p id="consulta-ultimo-tiempo-envio">Tiempo de envio:</p>
       <p id="consulta-ultimo-calculo-impuestos">Total con impuestos:</p>
-    </form>
+    </div>
+
   </div>
   <script src="script.js"></script>
 </body>

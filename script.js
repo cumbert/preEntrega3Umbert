@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const calcularBtn = document.getElementById('calcular-btn');
   const consultaUltimoCalculoBtn = document.getElementById('consultar-ultimo-calculo-btn');
+  const fomulario = document.getElementById('formulario');
+
 
   calcularBtn.addEventListener('click', function () {
     const tipoEnvio = document.getElementById('tipo-envio').value;
@@ -25,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     document.getElementById('resultado-tiempo-envio').textContent = `El tiempo de envio es de: ${tiempoEnvio}`;
-    document.getElementById('resultado-calcular-impuestos').textContent = `El valor final del envío es: $${valorFinalEnvio}`;
+    document.getElementById('resultado-calcular-impuestos').textContent = `El valor final del envío es: $${valorFinalEnvio.toFixed(2)}`;
 
-
+    fomulario.reset();
 
   });
 
